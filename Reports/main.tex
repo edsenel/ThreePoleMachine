@@ -1,16 +1,23 @@
 \documentclass[12]{article}
+\usepackage{chngcntr}
 
 \usepackage{gensymb}
-
 \usepackage{float}
 \usepackage{float}
 \usepackage{booktabs}
 \usepackage{multirow}
-
 \usepackage{amsmath}
-
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
 \setlength{\oddsidemargin}{0.25 in}
 \setlength{\evensidemargin}{-0.25 in}
 \setlength{\topmargin}{-0.6 in}
@@ -22,7 +29,7 @@
 \usepackage{geometry}
 \usepackage{textcomp}
 \usepackage[table,xcdraw]{xcolor}
-
+\counterwithin{figure}{subsection}
 \usepackage{graphicx}
 \usepackage[inkscapeformat=pdf,inkscapelatex=false]{svg}
 \graphicspath{ {./figs/} }
@@ -33,6 +40,10 @@
 \tableofcontents
 \newpage
 \input{Introduction.tex}
+\input{ProblemDefinition.tex}
 \input{Comparison.tex}
 \input{Selection.tex}
+\input{Simulations.tex}
+\input{ComponentSelection.tex}
+\input{Conclusion.tex}
 \end{document}

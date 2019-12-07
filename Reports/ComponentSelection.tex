@@ -1,0 +1,11 @@
+\section{Component Selection}
+
+We have simulated the Simulink Model such that input voltage and currents are similar to rated values. After completing the simulations, we have selected the components that we are going to use in the project.
+
+Since the “Buck Converter” MOSFET will conduct at around 80\% duty cycle after reaching rated speed, we decided to select a MOSFET that can carry up to 25-30 A average current. The voltage rating of the MOSFET must be bigger than 250V according to the simulation results. When we looked at the available components in the laboratory, we thought that \href{http://ixapps.ixys.com/Datasheet/DS100254B(IXGH24N60C4D1).pdf}{IXGH24N60C4D1} N Channel IGBT Transistor can be a good selection for us. 
+
+To decide which diode that we will use, we have followed the same procedure. The free-wheeling diode in the buck converter will carry at 90\% duty cycle at start up. Therefore, it can carry 25 A current. The reverse voltage of this diode reaches up to 200 V average at rated speed and has 250V peak value. Providing required voltage and current rating, \href{http://ixapps.ixys.com/DataSheet/DSEI30-06A.pdf}{DSEI30-06A} has been selected for the free-wheeling diode of the buck converter.
+
+The simulation results imply that diodes on the rectifier will carry average 10 A current which has 20-25 A peak value. Reverse voltage of rectifier diode has peak value of 245 V which is the peak of applied line to line voltage. By considering all these requirements, \href{http://ixapps.ixys.com/DataSheet/DSEI30-06A.pdf}{DSEI30-06A} is also a good selection for rectifier diodes. However, we think that \href{http://ixapps.ixys.com/DataSheet/DSEI12-06A.pdf}{DSEI12-06A} can also be used which has smaller but enough current rating. 
+
+We decided to use a 100uF 400V capacitor at the output of the rectifier. \href{https://www.nichicon.co.jp/english/products/pdfs/e-ucs.pdf}{33 uF Capacitor}, we will use three in parallel.
